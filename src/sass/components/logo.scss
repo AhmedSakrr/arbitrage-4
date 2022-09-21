@@ -1,0 +1,12 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: $default-font-size;
+    text-transform: uppercase;
+
+    padding: 1rem;
+    margin-bottom: 20px;
+}

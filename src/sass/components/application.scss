@@ -1,0 +1,13 @@
+.application {
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+}

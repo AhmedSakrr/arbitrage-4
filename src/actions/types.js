@@ -1,0 +1,7 @@
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
+export const LOGIN_FAILED = "LOGIN_FAILED"
+export const LOGOUT = "LOGOUT"
+export const REFRESH_TOKEN = "REFRESH_TOKEN"
+export const REFRESH_TOKEN_FAILED = "REFRESH_TOKEN_FAILED"
+export const GET_USER_DATA = "GET_USER_DATA"
+export const LOADING = "LOADING"

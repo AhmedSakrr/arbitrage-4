@@ -1,0 +1,18 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5.5rem;
+
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    font-size: 3rem;
+
+    padding: 0 1rem;
+
+    @include respond(tab-land) {
+        width: 95%;
+    }
+}

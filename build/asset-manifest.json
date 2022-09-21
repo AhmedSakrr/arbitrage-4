@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c7bbe7a4.css",
+    "main.js": "/static/js/main.d210a1d8.js",
+    "static/media/ellipse.png": "/static/media/ellipse.bedf3d036a1c7da1ca53.png",
+    "static/media/icon5.svg": "/static/media/icon5.b3f721a9673383414fccab30ad21f2aa.svg",
+    "static/media/icon1.svg": "/static/media/icon1.aa52f41ce01d623deb7d20196b5465b7.svg",
+    "static/media/icon4.svg": "/static/media/icon4.b8ed2d79ad54788e7261ba5336e2c412.svg",
+    "static/media/icon2.svg": "/static/media/icon2.fe549155a451ec785d191441250fd694.svg",
+    "static/media/icon3.svg": "/static/media/icon3.02d67e0d3d32a467b78f4c2034244330.svg",
+    "static/media/tools.svg": "/static/media/tools.726c83c25bf4e02bf2aef2fd451441aa.svg",
+    "static/media/application.svg": "/static/media/application.b991ab6d652dce34c3cca6148e0bec26.svg",
+    "static/media/stats.svg": "/static/media/stats.9067515bdd4c4187552cb3206218afd2.svg",
+    "static/media/rules.svg": "/static/media/rules.e5c1dd39ac94e6d9047ed65b6bb0619f.svg",
+    "static/media/terms_card-art.svg": "/static/media/terms_card-art.49e8f5a2a2422a081c915d6b9486cc78.svg",
+    "static/media/terms.svg": "/static/media/terms.19915e6a5fb0cf8363550035db05908e.svg",
+    "static/media/cross.svg": "/static/media/cross.4d304dea62c65fa0cb533ce1b43d7d3b.svg",
+    "index.html": "/index.html",
+    "static/media/Circle.svg": "/static/media/Circle.acd88cf01ccd8b9fde71545337b0d685.svg",
+    "main.c7bbe7a4.css.map": "/static/css/main.c7bbe7a4.css.map",
+    "main.d210a1d8.js.map": "/static/js/main.d210a1d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7bbe7a4.css",
+    "static/js/main.d210a1d8.js"
+  ]
+}

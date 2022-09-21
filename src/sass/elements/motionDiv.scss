@@ -1,0 +1,9 @@
+.motion_div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    @include respond(phone) {
+        width: 100% !important;
+    }
+}
