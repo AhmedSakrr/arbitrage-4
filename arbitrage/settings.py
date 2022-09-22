@@ -19,12 +19,12 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 ALLOWED_HOSTS = ['*']
 
-DEBUG = False
+DEBUG = True
 
 # CORS settings
 CORS_ORIGIN_ALLOW_ALL = True
 
-
+CSRF_TRUSTED_ORIGINS=['http://194.163.155.195']
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',

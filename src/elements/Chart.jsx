@@ -11,7 +11,7 @@ const Chart = () => {
     }
 
     const [total, setTotal] = useState(0)
-    const maxValue = 150000
+    const maxValue = 15000
 
     useEffect(() => {
         async function getTotal() {
