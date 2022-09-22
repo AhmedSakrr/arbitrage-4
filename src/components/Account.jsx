@@ -59,7 +59,6 @@ const Account = ({login, logout, refreshToken, getUserData, isAuthenticated, tok
             success(res.data["success"])
         }
         catch (error) {
-            console.error(error)
             errorMsg("Сессия истекла, перезагрузите страницу")
         }
     }
