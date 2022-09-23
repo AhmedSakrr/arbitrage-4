@@ -42,6 +42,11 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        
+        span {
+            max-width: 10rem;
+            text-overflow: ellipsis;
+        }
 
     }
 

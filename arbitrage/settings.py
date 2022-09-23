@@ -2,11 +2,6 @@ from datetime import timedelta
 from pathlib import Path
 import os
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
@@ -19,15 +14,14 @@ ALLOWED_HOSTS = ['*']
 
 DEBUG = True
 
+# Custom user model
 AUTH_USER_MODEL = 'accounts.UserAccount'
 
 # CORS settings
 CORS_ORIGIN_ALLOW_ALL = True
 
-# CSRF_TRUSTED_ORIGINS=['http://194.163.155.195']
-
-# Custom user model
-# AUTH_USER_MODEL = 'accounts.UserAccount'
+# csrf settings
+CSRF_TRUSTED_ORIGINS=['http://194.163.155.195']
 
 # Application definition
 INSTALLED_APPS = [

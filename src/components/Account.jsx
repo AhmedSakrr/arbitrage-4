@@ -74,10 +74,10 @@ const Account = ({login, logout, refreshToken, getUserData, isAuthenticated, tok
                 </div>
             :
             <>
-                {isAuthenticated && user !== {} ? 
+                {isAuthenticated && user !== {} ?  
                     <>
                         <div className="account__wrapper">
-                            <span>{user.name}</span>
+                            <span>{user.name.length > 9 ? user.name.slice(0, 7) + "..." : user.name}</span>
                             <img onClick={logoutUser} className="account__cross" src={cross} alt="Cross" />
                         </div>
                         <div className="account__info">
