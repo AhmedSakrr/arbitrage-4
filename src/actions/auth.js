@@ -15,7 +15,7 @@ export const login = (username, password) => async dispatch => {
         dispatch({
             type: LOADING,
         })
-        const res = await axios.post("https://194.163.155.195/api/token/", body, config)
+        const res = await axios.post("https://achedge.net/api/token/", body, config)
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
@@ -50,7 +50,7 @@ export const refreshToken = (refresh) => async dispatch => {
         dispatch({
             type: LOADING,
         })
-        const res = await axios.post("https://194.163.155.195/api/token/refresh/", body, config)
+        const res = await axios.post("https://achedge.net/api/token/refresh/", body, config)
         dispatch({
             type: REFRESH_TOKEN,
             payload: res.data
@@ -78,7 +78,7 @@ export const getUserData = (token) => async dispatch => {
             type: LOADING,
         })
 
-        const res = await axios.get("https://194.163.155.195/api/user/current/", config)
+        const res = await axios.get("https://achedge.net/api/user/current/", config)
         
         dispatch({
             type: GET_USER_DATA,

@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["SECRET_KEY"]
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['achedge.net', '194.163.155.195', '127.0.0.1']
 
 DEBUG = True
 
@@ -21,7 +21,7 @@ AUTH_USER_MODEL = 'accounts.UserAccount'
 CORS_ORIGIN_ALLOW_ALL = True
 
 # csrf settings
-CSRF_TRUSTED_ORIGINS=['http://194.163.155.195']
+CSRF_TRUSTED_ORIGINS=['https://achedge.net', 'https://194.163.155.195']
 
 # Application definition
 INSTALLED_APPS = [

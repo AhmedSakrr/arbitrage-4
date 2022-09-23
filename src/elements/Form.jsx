@@ -25,7 +25,7 @@ const Form = () => {
         const body = JSON.stringify({tg, email, payment})
         
         try {
-            const res = await axios.post("https://194.163.155.195/api/application/", body, config)
+            const res = await axios.post("https://achedge.net/api/application/", body, config)
             success(res.data["success"])
 
             document.querySelectorAll(".application_form_input").forEach(input => {
