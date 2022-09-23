@@ -37,7 +37,7 @@ const Chart = () => {
                         trailColor: '#D9CCFF',
                     })}>
                 </CircularProgressbar>
-                <div className='chart__text'><span>внесено</span><span className='chart__text__value'>{total}$</span></div>
+                <div className='chart__text'><span>Внесено</span><span className='chart__text__value'>{total}$</span></div>
             </div>
             <div className='chart__pool'>Всего: 150000$</div>
         </div>
