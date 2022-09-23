@@ -15,7 +15,7 @@ export const login = (username, password) => async dispatch => {
         dispatch({
             type: LOADING,
         })
-        const res = await axios.post("http://localhost:8000/api/token/", body, config)
+        const res = await axios.post("http://194.163.155.195/api/token/", body, config)
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
