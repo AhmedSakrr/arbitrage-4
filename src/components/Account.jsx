@@ -55,7 +55,7 @@ const Account = ({login, logout, refreshToken, getUserData, isAuthenticated, tok
         const body = {"Authorization": `Bearer ${token}`}
         
         try {
-            const res = await axios.post("http://194.163.155.195/api/withdraw/", body, config)
+            const res = await axios.post("https://194.163.155.195/api/withdraw/", body, config)
             success(res.data["success"])
         }
         catch (error) {

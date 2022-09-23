@@ -16,7 +16,7 @@ const Chart = () => {
     useEffect(() => {
         async function getTotal() {
             try {
-                const res = await axios.get("http://194.163.155.195/api/total/", config)
+                const res = await axios.get("https://194.163.155.195/api/total/", config)
                 setTotal(parseInt(res.data["total"]))
             }
             catch (e) {
