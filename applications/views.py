@@ -33,10 +33,11 @@ class ApplicationView(APIView):
                 return Response({"error": "Сумма взноса должна быть меньше чем 5000 и больше 500"}, status=status.HTTP_400_BAD_REQUEST)
         except ValueError:
             return Response({"error": "В поле Сумма взноса должно быть введено целое число"}, status=status.HTTP_400_BAD_REQUEST)
-        
-        application = Application(tg=tg, email=email, payment=payment)
-        application.save()
-
+        try:
+            application = Application(tg=tg, email=email, payment=payment)
+            application.save()
+        except IntegrityError:
+            return Response({"error": "Юзер с таким telegram ID или email уже отправлял заявку"}, status=status.HTTP_400_BAD_REQUEST)
         return Response({"success": "Заявка отправлена успешно"}, status=status.HTTP_200_OK)
 
 

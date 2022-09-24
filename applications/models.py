@@ -9,8 +9,8 @@ from django.conf import settings
 User = settings.AUTH_USER_MODEL
 
 class Application(models.Model):
-    tg = models.CharField(max_length=32)
-    email = models.EmailField()
+    tg = models.CharField(max_length=32, unique=True)
+    email = models.EmailField(unique=True)
     payment = IntegerRangeField(min_value=500, max_value=5000)
     is_approved = models.BooleanField(default=False)
 
