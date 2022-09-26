@@ -82,7 +82,7 @@ const Account = ({login, logout, refreshToken, getUserData, isAuthenticated, tok
                         </div>
                         <div className="account__info">
                             <div className="account__info__wrapper block_bg">
-                                <span>Чистая прибыль</span>
+                                <span style={{fontSize: "2.2rem"}}>Чистая прибыль</span>
                                 <span className="account__info__value">{user.profit}$</span>
                             </div>
                         </div>
