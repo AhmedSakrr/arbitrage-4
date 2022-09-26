@@ -5,12 +5,12 @@ from .serializers import DepositSerializer, PayoutSerializer
 from rest_framework.response import Response
 
 class DepositsListView(ListAPIView):
-    queryset = Deposit.objects.order_by("-date")[:7]
+    queryset = Deposit.objects.order_by("-date")
     serializer_class = DepositSerializer
 
 
 class PayoutsListView(ListAPIView):
-    queryset = Payout.objects.order_by("-date")[:7]
+    queryset = Payout.objects.order_by("-date")
     serializer_class = PayoutSerializer
 
 

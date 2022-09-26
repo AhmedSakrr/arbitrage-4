@@ -14,6 +14,7 @@ class CurrentUser(APIView):
         payouts = Payout.objects.filter(user=user)
         balance = sum([deposit.amount for deposit in deposits])
         profit = sum([payout.amount for payout in payouts])
+        profit += balance
 
         if not user.username:
             return Response({"error": "Войдите пожалалуйста в аккаунт"}, status=status.HTTP_400_BAD_REQUEST)

@@ -8,7 +8,7 @@ from .models import UserAccount
 class UserAdminCustomForm(forms.ModelForm):
     class Meta:
         model = UserAccount
-        fields = ('username', 'password', "is_active")
+        fields = ('username', 'password', "is_active", "is_superuser")
 
 
 class UserAdminCustom(UserAdmin):
@@ -28,5 +28,4 @@ class UserAdminCustom(UserAdmin):
 
 
 admin.site.unregister(Group)
-# admin.site.unregister(User)
 admin.site.register(UserAccount, UserAdminCustom)
