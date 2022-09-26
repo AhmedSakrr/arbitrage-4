@@ -83,13 +83,13 @@ const Account = ({login, logout, refreshToken, getUserData, isAuthenticated, tok
                         <div className="account__info">
                             <div className="account__info__wrapper block_bg">
                                 <span>Прибыль</span>
-                                <span className="account__info__value">{user.balance}$</span>
+                                <span className="account__info__value">{user.profit}$</span>
                             </div>
                         </div>
                         <div className="account__info">
                             <div className="account__info__wrapper block_bg">
                                 <span>Взнос</span>
-                                <span className="account__info__value">{user.profit}$</span>
+                                <span className="account__info__value">{user.balance}$</span>
                             </div>
                         </div>
                     </>
