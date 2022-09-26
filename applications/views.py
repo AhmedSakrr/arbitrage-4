@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from .models import Application, Withdraw
 from rest_framework import permissions, status
 from rest_framework.throttling import AnonRateThrottle
+from django.db import IntegrityError
 
 class CustomAnonRateThrottle(AnonRateThrottle):
     rate= '5/day'
