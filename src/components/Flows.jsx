@@ -21,7 +21,7 @@ const Flows = () => {
     useEffect(() => {
         async function getTraffic() {
             try {
-                const res = await axios.get(`http://achedge.net/api/traffic/`, config)
+                const res = await axios.get(`https://achedge.net/api/traffic/`, config)
                 setTraffic(res.data)
             }
             catch (e) {
