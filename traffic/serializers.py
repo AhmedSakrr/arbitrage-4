@@ -1,18 +1,10 @@
 from rest_framework import serializers
-from .models import Deposit, Payout
+from .models import Traffic
 
 
-class DepositSerializer(serializers.ModelSerializer):
+class TrafficSerializer(serializers.ModelSerializer):
     user = serializers.CharField(source='user.username')
 
     class Meta:
-        model = Deposit
-        fields = ("user", "amount", )
-
-
-class PayoutSerializer(serializers.ModelSerializer):
-    user = serializers.CharField(source='user.username')
-
-    class Meta:
-        model = Payout
-        fields = ("user", "amount", )
+        model = Traffic
+        fields = ("user", "amount", "date", "type")

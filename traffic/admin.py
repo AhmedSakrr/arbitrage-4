@@ -1,18 +1,13 @@
 from django.contrib import admin
-from .models import Deposit, Payout
+from .models import Traffic
 from django import forms
 
 class TrafficCustomForm(forms.ModelForm):
     class Meta:
-        model = Deposit
-        fields = ('amount', )
+        model = Traffic
+        fields = ('amount', 'date', 'type')
 
 
-class DepositInline(admin.TabularInline):
-    model = Deposit
-    form = TrafficCustomForm
-
-
-class PayoutInline(admin.TabularInline):
-    model = Payout
+class TrafficInline(admin.TabularInline):
+    model = Traffic
     form = TrafficCustomForm

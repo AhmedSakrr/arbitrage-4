@@ -2,7 +2,7 @@ from django import forms
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
-from traffic.admin import DepositInline, PayoutInline
+from traffic.admin import TrafficInline
 from .models import UserAccount
 
 class UserAdminCustomForm(forms.ModelForm):
@@ -18,8 +18,7 @@ class UserAdminCustom(UserAdmin):
    fieldsets = ()
    form = UserAdminCustomForm
    inlines = [
-        DepositInline,
-        PayoutInline
+        TrafficInline
     ]
 
    @admin.display(description='Author Name', ordering='author__username')

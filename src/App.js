@@ -29,8 +29,7 @@ function App() {
           </Navbar>
           <Content>
             <Header/>
-            <Flows header="Выплаты" type="payouts"/>
-            <Flows header="Вклады" type="deposits"/>
+            <Flows/>
             <Terms/>
             <Tools/>
             <Rules/>

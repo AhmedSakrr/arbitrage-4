@@ -1,10 +1,14 @@
 import axios from 'axios'
 import { useEffect, useState } from "react"
-import PropTypes from 'prop-types'
 import { ThreeDots } from 'react-loader-spinner'
+import wallet from '../assets/flows/wallet.svg'
+import box from '../assets/flows/box.svg'
+import deposit from '../assets/flows/deposit.svg'
 
 
-const Flows = ({type, header}) => {
+const Flows = () => {
+
+    const trafficTypesToInfo = {"DT": [deposit, "Взнос"], "PT": [wallet, "Выплата"], "BT": [box, "Бонус за приглашение"]}
 
     const [traffic, setTraffic] = useState()
 
@@ -17,7 +21,7 @@ const Flows = ({type, header}) => {
     useEffect(() => {
         async function getTraffic() {
             try {
-                const res = await axios.get(`https://achedge.net/api/${type}/`, config)
+                const res = await axios.get(`http://achedge.net/api/traffic/`, config)
                 setTraffic(res.data)
             }
             catch (e) {
@@ -28,29 +32,31 @@ const Flows = ({type, header}) => {
     }, [])
 
     return (
-            <section className="flows">
-                <div className="flows__header">{header}</div>
-                <div className="flows__items block_bg">
-                    {traffic ? 
+            <section className="flows block_bg">
+                <table className="flows__items">
+                    <tbody>
+                        {traffic ?
                         <>
                             {traffic.map((item, i) => (
-                                <div key={i} className="flows__items__item block_bg"><nobr>{item.user} {item.amount}$</nobr></div>
+                                <tr className='flows__items__item' key={i}>
+                                    <th><img src={trafficTypesToInfo[item.type][0]} alt="Traffic type" /></th>
+                                    <th>{item.user.length > 9 ? item.user.slice(0, 7) + "..." : item.user}</th>
+                                    <th>{item.type === "BT" || item.type === "PT" ? "+" : null}{item.amount}$</th>
+                                    <th>{trafficTypesToInfo[item.type][1]}</th>
+                                    <th className='flows__items__item__date'>{item.date.slice(5, item.date.length).split("T")[0].split("-").join(".")}</th>
+                                </tr>
                             ))}
                         </>
                     :
-                        <div className="flows__loader">
+                        <tr className="flows__loader">
                             <ThreeDots color="#8960FF"/>
-                        </div>
+                        </tr>
                     }
-                </div>
-                
+                        </tbody>
+                </table>
+                    
             </section>
     )
-}
-
-Flows.propTypes = {
-    type: PropTypes.string.isRequired,
-    header: PropTypes.string,
 }
 
 export default Flows

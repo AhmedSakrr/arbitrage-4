@@ -1,22 +1,23 @@
-from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
-from .models import Deposit, Payout
-from .serializers import DepositSerializer, PayoutSerializer
+from rest_framework.generics import ListAPIView
+from .models import Traffic
 from rest_framework.response import Response
+from .serializers import TrafficSerializer
 
-class DepositsListView(ListAPIView):
-    queryset = Deposit.objects.order_by("-date")
-    serializer_class = DepositSerializer
+class TrafficView(ListAPIView):
+    queryset = Traffic.objects.order_by("-date")
+    serializer_class = TrafficSerializer
 
 
-class PayoutsListView(ListAPIView):
-    queryset = Payout.objects.order_by("-date")
-    serializer_class = PayoutSerializer
+
+# class PayoutsListView(ListAPIView):
+#     queryset = Payout.objects.order_by("-date")
+#     serializer_class = PayoutSerializer
 
 
 class TotalView(APIView):
 
-    def get(self, requests, format=None):
+    def get(self, request, format=None):
         total = 0
         deposits = Deposit.objects.all()
         if len(deposits) > 0:

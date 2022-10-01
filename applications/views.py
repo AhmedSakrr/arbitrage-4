@@ -2,15 +2,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Application, Withdraw
 from rest_framework import permissions, status
-from rest_framework.throttling import AnonRateThrottle
 from django.db import IntegrityError
-
-class CustomAnonRateThrottle(AnonRateThrottle):
-    rate= '5/day'
 
 class ApplicationView(APIView):
     permission_classes = (permissions.AllowAny, )
-    throttle_classes = [CustomAnonRateThrottle]
 
     def post(self, request, format=None):
         data = self.request.data

@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions, status
 
-from traffic.models import Deposit, Payout
+from traffic.models import Traffic
 
 
 class CurrentUser(APIView):
@@ -10,8 +10,8 @@ class CurrentUser(APIView):
 
     def get(self, request, format=None):
         user = self.request.user
-        deposits = Deposit.objects.filter(user=user)
-        payouts = Payout.objects.filter(user=user)
+        deposits = Traffic.objects.filter(user=user, type="DT")
+        payouts = Traffic.objects.filter(user=user, type="PT")
         balance = sum([deposit.amount for deposit in deposits])
         profit = sum([payout.amount for payout in payouts])
 
