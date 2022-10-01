@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5d2fd838.css",
-    "main.js": "/static/js/main.47345841.js",
+    "main.js": "/static/js/main.15e3a4dd.js",
     "static/media/ellipse.png": "/static/media/ellipse.bedf3d036a1c7da1ca53.png",
     "static/media/icon5.svg": "/static/media/icon5.b3f721a9673383414fccab30ad21f2aa.svg",
     "static/media/icon1.svg": "/static/media/icon1.aa52f41ce01d623deb7d20196b5465b7.svg",
@@ -16,15 +16,15 @@
     "static/media/rules.svg": "/static/media/rules.e5c1dd39ac94e6d9047ed65b6bb0619f.svg",
     "static/media/terms_card-art.svg": "/static/media/terms_card-art.49e8f5a2a2422a081c915d6b9486cc78.svg",
     "static/media/terms.svg": "/static/media/terms.19915e6a5fb0cf8363550035db05908e.svg",
-    "index.html": "/index.html",
     "static/media/wallet.svg": "/static/media/wallet.0c29e8a580b4f8d9463a6910aba306a4.svg",
+    "index.html": "/index.html",
     "static/media/cross.svg": "/static/media/cross.4d304dea62c65fa0cb533ce1b43d7d3b.svg",
     "static/media/Circle.svg": "/static/media/Circle.acd88cf01ccd8b9fde71545337b0d685.svg",
     "main.5d2fd838.css.map": "/static/css/main.5d2fd838.css.map",
-    "main.47345841.js.map": "/static/js/main.47345841.js.map"
+    "main.15e3a4dd.js.map": "/static/js/main.15e3a4dd.js.map"
   },
   "entrypoints": [
     "static/css/main.5d2fd838.css",
-    "static/js/main.47345841.js"
+    "static/js/main.15e3a4dd.js"
   ]
 }
