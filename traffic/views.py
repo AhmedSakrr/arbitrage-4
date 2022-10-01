@@ -19,7 +19,7 @@ class TotalView(APIView):
 
     def get(self, request, format=None):
         total = 0
-        deposits = Deposit.objects.all()
+        deposits = Traffic.objects.filter(type="DT")
         if len(deposits) > 0:
             for deposit in deposits:
                 total += deposit.amount
