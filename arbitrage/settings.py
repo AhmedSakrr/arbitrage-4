@@ -23,6 +23,15 @@ CORS_ORIGIN_ALLOW_ALL = True
 # csrf settings
 CSRF_TRUSTED_ORIGINS=['https://achedge.net', 'https://194.163.155.195']
 
+# dbbackup settings
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR / "backups"}
+
+#crontab settings
+CRONJOBS = [
+    ('0 0 * * *', 'arbitrage.cron.my_scheduled_job')
+]
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -32,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'dbbackup',
+    'django_crontab',
     'rest_framework',
     'applications',
     'accounts',
