@@ -10,16 +10,29 @@
     height: 26rem;
     overflow-y: scroll;
 
-    ::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 7px;
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, .5);
-        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-      }
+    /* total width */
+    &::-webkit-scrollbar {
+        background-color: #fff;
+        width: 16px;
+        border-radius: 1rem;
+    }
+
+    /* background of the scrollbar except button or resizer */
+    &::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 15px;
+    }
+
+    /* scrollbar itself */
+    &::-webkit-scrollbar-thumb {
+        background-color: #babac0;
+        border-radius: 16px;
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    &::-webkit-scrollbar-button {
+        display:none;
+    }
 
     &__header {
         font-size: 3.5rem;
@@ -43,6 +56,10 @@
     
         &__item {
             font-size: $default-font-size;
+
+            @include respond(phone) {
+                font-size: 1.3rem;
+            }
 
             &__id {
 

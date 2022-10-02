@@ -16,8 +16,9 @@ $duration: 0.5s;
         left: 2rem;
 
         .navbar__blackout {
-            display: block !important;
             opacity: 0.95;
+
+            transition: opacity 0.3s ease-in;
         }
 
         .arrow-icon {
@@ -70,7 +71,6 @@ $duration: 0.5s;
         z-index: 1000;
 
         transition: opacity 0.3s linear;
-        display: none;
     }
 }
 
