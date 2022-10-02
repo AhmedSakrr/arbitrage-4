@@ -60,7 +60,7 @@ $duration: 0.5s;
 
     &__blackout {
         position: fixed;
-        top: 0;
+        top: -100vh;
         left: 0;
     
         width: 100vw;
